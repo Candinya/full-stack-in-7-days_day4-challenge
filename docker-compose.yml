@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  prime-calc:
+    #image: ghcr.io/candinya/day4-challenge:foo # 可以拉取预构建的镜像来使用（推荐）
+    build: . # 也可以直接走一遍构建流程（调试方便）
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:1323:1323"
